@@ -33,7 +33,7 @@ class CreditCalculationTest < Minitest::Test
   def test_applicant
     assert_equal @applicant_01.personal_credit, 750
     assert_equal @applicant_01.biz_age, 2
-    assert_equal @applicant_01.biz_type, "Small Business"
+    assert_includes BusinessDetails::Type, @applicant_01.biz_type
     assert_equal @applicant_01.biz_industry, "Construction"
   end
 
