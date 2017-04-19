@@ -1,5 +1,5 @@
 class Applicant
-  attr_reader :personal_credit, :biz_age, :biz_type, :biz_industry, :loan_size
+  attr_reader :personal_credit, :biz_age, :biz_type, :biz_industry, :loan_size, :x
 
   def initialize
     @personal_credit = 750
