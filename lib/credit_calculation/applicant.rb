@@ -1,12 +1,12 @@
 class Applicant
   attr_reader :personal_credit, :biz_age, :biz_type, :biz_industry, :loan_size, :x
 
-  def initialize
-    @personal_credit = 750
-    @biz_age = 2
-    @biz_type = "Small Business"
-    @biz_industry = "Construction"
-    @loan_size = 150000
-    @security = "Unsecured"
+  def initialize(personal_credit, biz_age, biz_type,
+                biz_industry, loan_size)
+    @personal_credit = personal_credit
+    @biz_age = biz_age
+    @biz_type = biz_type
+    @biz_industry = biz_industry
+    @loan_size = loan_size
   end
 end
