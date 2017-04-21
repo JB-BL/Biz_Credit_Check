@@ -1,15 +1,16 @@
 require 'rake/testtask'
 require 'minitest/autorun'
 require 'test_helper.rb'
+require_relative '../lib/credit_calculation/el.rb'
 
 class ELTest < Minitest::Test
 
   def setup
-    @current_lgd = LGD.new
+    @applicant_01 = ExpectedLoss.new(0.10, 0.05, 100000)
   end
 
-  def test_pd
-    assert_equal LGD.lgd * PD.pd * EAD.ead, 2.5
+  def test_el
+    assert_equal @applicant_01.el, (sprintf "%.2f", 500.00)
   end
 
 end

@@ -18,6 +18,6 @@ class LGDTest < Minitest::Test
   end
 
   def test_LGDArray_contains
-    assert_includes @lgd.lgd_active_array, ["Leased Goods", "Small Business"]
+    assert_includes @lgd.active_array, ["Leased Goods", "Small Business"]
   end
 end
