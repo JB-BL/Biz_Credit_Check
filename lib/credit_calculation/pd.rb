@@ -1,16 +1,18 @@
 class PD
 
-  attr_accessor :pd
+  attr_accessor :pd, :personal_credit_weight, :industry_weight, :biz_age_weight
 
-  def calculate_pd(personal_credit, biz_industry, biz_age)
-    @pd = sprintf "%.5f", ((@personal_credit_weight * @industry_weight * @biz_age_weight).round(5))
-  end
-
-  def set_weights(personal_credit_weight, industry_weight, biz_age_weight)
+  def initialize(personal_credit_weight, industry_weight, biz_age_weight)
     @personal_credit_weight = personal_credit_weight
     @industry_weight = industry_weight
     @biz_age_weight = biz_age_weight
   end
+
+  # def set_weights(personal_credit_weight, industry_weight, biz_age_weight)
+  #   @personal_credit_weight = personal_credit_weight
+  #   @industry_weight = industry_weight
+  #   @biz_age_weight = biz_age_weight
+  # end
 
   def check_weights
     until ((@personal_credit_weight + @industry_weight + @biz_age_weight) == 1.0)
@@ -29,8 +31,3 @@ class PD
   end
 
 end
-
-
-x = PD.new
-x.set_weights(0.25, 0.25, 0.25)
-x.check_weights

@@ -6,6 +6,6 @@ class ExpectedLoss
   end
 end
 
-applicant_01 = ExpectedLoss.new(0.10, 0.05, 100000)
-
-puts applicant_01.el
+# applicant_01 = ExpectedLoss.new(0.10, 0.05, 100000)
+#
+# puts applicant_01.el

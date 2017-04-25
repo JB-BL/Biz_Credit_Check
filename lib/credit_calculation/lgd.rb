@@ -32,9 +32,9 @@ class LGD
   end
 end
 
-xx = Applicant.new(700, 2, "Small Business", "Construction", 100000)
-y = LGD.new
-y.active_hash_create(xx.biz_type)
-y.active_array_create
-y.applicant_hash_create
-p y
+# xx = Applicant.new(700, 2, "Small Business", "Construction", 100000)
+# y = LGD.new
+# y.active_hash_create(xx.biz_type)
+# y.active_array_create
+# y.applicant_hash_create
+# p y

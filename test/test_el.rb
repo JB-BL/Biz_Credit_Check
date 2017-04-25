@@ -1,6 +1,6 @@
 require 'rake/testtask'
 require 'minitest/autorun'
-require 'test_helper.rb'
+require_relative 'test_helper.rb'
 require_relative '../lib/credit_calculation/el.rb'
 
 class ELTest < Minitest::Test
