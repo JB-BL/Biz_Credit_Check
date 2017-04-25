@@ -16,7 +16,16 @@ class Applicant
   def pd_calc(personal_credit_weight, industry_weight, biz_age_weight)
     @pd = ((personal_credit_weight * PersonalCredit::Default[@personal_credit]) + (industry_weight * BusinessDetails::Industry[@biz_industry]) + (biz_age_weight * BusinessDetails::Age[@biz_age])).round(5)
   end
-end
 
-x = Applicant.new(750, 1, "Micro Business", "Construction", 100000)
-p x.pd_calc(0.5, 0.25, 0.25)
+  def applicant_rating
+    if @pd <= 0.03
+      @rating = "Low"
+    elsif @pd >0.03 and @pd <= 0.05
+      @rating = "Medium"
+    elsif @pd >0.05 and @pd <= 0.10
+      @rating = "High"
+    else
+      @rating = "Very High"
+    end
+  end
+end
